@@ -12,7 +12,7 @@ public class Main {
             int x = leer.nextInt();
             System.out.println("Ingrese la Y del punto "+i);
             int y = leer.nextInt();
-            Punto punto = new Punto(x,y);
+            Punto punto = new Punto(x,y,i);
             misPuntos.add(punto);
         }
         Punto menorPuntoA = null;
@@ -32,7 +32,7 @@ public class Main {
         }
         System.out.println("La menor distancia fue " + menorDistancia);
         System.out.println("Entre los puntos: ");
-        System.out.println("A "+menorPuntoA.toString());
-        System.out.println("B "+menorPuntoB.toString());
+        System.out.println("Punto "+menorPuntoA.getCont()+": "+menorPuntoA.toString());
+        System.out.println("Punto "+menorPuntoB.getCont()+": "+menorPuntoB.toString());
     }
 }

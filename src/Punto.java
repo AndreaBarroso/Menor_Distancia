@@ -1,19 +1,18 @@
 public class Punto {
     double x;
     double y;
-    static int cont = 0;
+    int cont;
 
-    public Punto(double x, double y){
+    public Punto(double x, double y,int cont){
         this.x = x;
         this.y = y;
-        cont++;
+        this.cont = cont;
     }
 
     public double menorPunto(Punto miPunto){
         double parte1 = miPunto.getX()-this.getX();
         double parte2 = miPunto.getY()-this.getY();
-        double distancia = Math.sqrt(parte1*parte1 + parte2*parte2);
-        return distancia;
+        return Math.sqrt(parte1*parte1 + parte2*parte2);
     }
 
     public double getX() {
